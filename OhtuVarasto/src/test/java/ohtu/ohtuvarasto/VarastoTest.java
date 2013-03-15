@@ -42,10 +42,11 @@ public class VarastoTest {
         varasto.lisaaVarastoon(-1);
         assertEquals(0,varasto.getSaldo(),vertailuTarkkuus);
     }
-     @Test
+    
+    @Test
     public void lisaysLisaaSaldoaLiikaa() {
         varasto.lisaaVarastoon(15);
-        assertEquals(0,varasto.getSaldo(),vertailuTarkkuus);
+        assertEquals(10.0,varasto.getSaldo(),vertailuTarkkuus);
     }
 
     @Test
@@ -79,7 +80,7 @@ public class VarastoTest {
 
         double saatuMaara = varasto.otaVarastosta(-1);
 
-        assertEquals(8, saatuMaara, vertailuTarkkuus);
+        assertEquals(0.0, saatuMaara, vertailuTarkkuus);
     }
     
     @Test
